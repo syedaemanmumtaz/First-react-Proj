@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -34,21 +35,24 @@ const Navbar = () => {
           </div>
         </form>
 	      <div className="collapse navbar-collapse logo" id="ftco-nav">
-	        <ul className="navbar-nav mr-auto">
-	        	<li className="  nav-item active"><a href="#" className="nav-link">Home</a></li>
-	        	<li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Page</a>
-              <div className="dropdown-menu" aria-labelledby="dropdown04">
-              	<a className="dropdown-item" href="#">Page 1</a>
-                <a className="dropdown-item" href="#">Page 2</a>
-                <a className="dropdown-item" href="#">Page 3</a>
-                <a className="dropdown-item" href="#">Page 4</a>
-              </div>
+        <ul className="navbar-nav mr-auto">
+	        	<li >
+            <Link className=" nav-item active nav-link " to="/Home">Home</Link>
             </li>
-	        	<li className="nav-item"><a href="#" className="nav-link">Menu</a></li>
-	        	<li className="nav-item"><a href="#" className="nav-link">Blog</a></li>
-	          <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
-	        </ul>
+	        	<li >
+            <Link className="nav-item nav-link" to="/Menu">Menu</Link>
+            </li>
+	        	<li >
+            <Link className="nav-item nav-link"  to="/Blog">Blog</Link>
+            </li>
+            <li >
+            <Link className="nav-item nav-link" to="/Contect">Contect</Link>
+            </li>
+	        
+          <li className='dropdown' >
+            <Link className="nav-item nav-link  dropdown-toggle" target='blank' to="/About">About-Us</Link>
+            </li>
+            </ul>
 	      </div>
 	    </div>
 	  </nav>
